@@ -13,20 +13,21 @@
 <body>
 
   <header class="app-header">
-    <a class="brand" href="/">
+    <a class="brand" href="#home">
       <span class="brand-name">Borders and Property</span>
       <span class="brand-sub">A Digital Analysis of the Impact of the Ottoman–Greek Border on the Ottoman Property Regime</span>
     </a>
     <nav class="site-nav" aria-label="Site">
-      <a href="/" aria-current="page">Home</a>
-      <a href="/research/">Research</a>
-      <a href="/resources/"><span class="long">Digital </span>Resources</a>
-      <a href="/team/">Team</a>
+      <a href="#home" aria-current="page">Home</a>
+      <a href="#research">Research</a>
+      <a href="#resources"><span class="long">Digital </span>Resources</a>
+      <a href="#team">Team</a>
     </nav>
   </header>
   <div class="frontier-line" aria-hidden="true"></div>
 
-  <section class="hero">
+  <!-- ===================== HOME ===================== -->
+  <section class="hero" id="home" data-nav>
     <div class="hero-inner">
       <h1>Borders and Property<span class="title-sub">A Digital Analysis of the Impact of the Ottoman–Greek Border on the Ottoman Property Regime</span></h1>
 
@@ -49,44 +50,210 @@
 
   <main class="page">
 
-    <section class="section">
-      <h2>About the project</h2>
-      <div class="body">
-        <p><em>Borders and Property</em> is a three-year research project (2025–2028) funded by the Scientific and Technological Research Council of Türkiye (TÜBİTAK, Project No. 225K044).</p>
-        <p>The project investigates the transformation of property relations along the Ottoman–Greek border during the territorial negotiations and border changes of 1877–1883. Drawing on Ottoman, Greek, and British historical sources, it examines how shifting political boundaries affected property claims, legal practices, and relations between landholders and state authorities.</p>
-        <p>Bringing together historians and computer scientists, the project develops digital approaches to the analysis and integration of multilingual historical sources. Its research combines archival investigation, historical data extraction, spatial analysis, and computational methods.</p>
-      </div>
-    </section>
+    <div class="part part-home">
 
-    <section class="section">
-      <h2>Funding</h2>
-      <div class="body">
-        <p>Scientific and Technological Research Council of Türkiye (TÜBİTAK), Project No. 225K044.</p>
-        <p>Co-funder: Bahçeşehir University.</p>
-      </div>
-    </section>
+      <section class="section">
+        <h3>About the project</h3>
+        <div class="body">
+          <p><em>Borders and Property</em> is a three-year research project (2025–2028) funded by the Scientific and Technological Research Council of Türkiye (TÜBİTAK, Project No. 225K044).</p>
+          <p>The project investigates the transformation of property relations along the Ottoman–Greek border during the territorial negotiations and border changes of 1877–1883. Drawing on Ottoman, Greek, and British historical sources, it examines how shifting political boundaries affected property claims, legal practices, and relations between landholders and state authorities.</p>
+          <p>Bringing together historians and computer scientists, the project develops digital approaches to the analysis and integration of multilingual historical sources. Its research combines archival investigation, historical data extraction, spatial analysis, and computational methods.</p>
+        </div>
+      </section>
 
-    <section class="section">
-      <h2>Featured digital resource</h2>
-      <div class="body">
-        <div class="sheet">
-          <h3>Thessaly Border Gazetteer</h3>
+      <section class="section">
+        <h3>Funding</h3>
+        <div class="body">
+          <p>Scientific and Technological Research Council of Türkiye (TÜBİTAK), Project No. 225K044.</p>
+          <p>Co-funder: Bahçeşehir University.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Featured digital resource</h3>
+        <div class="body">
+          <div class="sheet">
+            <h4>Thessaly Border Gazetteer</h4>
+            <ol class="status" aria-label="Status: in development">
+              <li class="is-done">Planned</li>
+              <li class="is-now">In development</li>
+              <li>Published</li>
+            </ol>
+            <p>Explore the historical geography of the Ottoman–Greek frontier through a developing gazetteer that connects historical place names, modern geographical identifications, and archival references.</p>
+            <a class="btn" href="/Thessaly-Border-Gazetteer/">Open the gazetteer</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ===================== RESEARCH ===================== -->
+    <div class="part" id="research" data-nav>
+      <header class="part-head">
+        <h2>Research</h2>
+        <p>Historical context, sources, and methods</p>
+      </header>
+
+      <section class="section">
+        <h3>Historical context</h3>
+        <div class="body">
+          <p>Between 1877 and 1883, the Ottoman–Greek border underwent a series of diplomatic negotiations and territorial changes. The Treaty of Berlin (1878) and the Convention of Constantinople (1881) played central roles in redefining the frontier, particularly in Thessaly and Epirus.</p>
+          <p>These developments raised questions concerning the ownership, transfer, and legal status of landed property. The project investigates how property relations were negotiated and transformed in the context of changing political sovereignty.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Research questions</h3>
+        <div class="body">
+          <p>The project addresses three interconnected questions:</p>
+          <ul>
+            <li>How did the reconfiguration of the Ottoman–Greek border affect existing property relations and claims?</li>
+            <li>How did Ottoman and Greek authorities, landholders, and other actors negotiate competing claims to property?</li>
+            <li>How can the integration of multilingual historical sources contribute to a more comprehensive understanding of border formation and property transformation?</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Historical sources</h3>
+        <div class="body">
+          <p>The project draws on a multilingual collection of historical materials.</p>
+          <table class="sources">
+            <tr><th scope="row">Ottoman archival documents</th><td>Administrative correspondence, property claims, legal proceedings, and related records.</td></tr>
+            <tr><th scope="row">Greek archival documents</th><td>Administrative and legal records concerning territorial change and property relations.</td></tr>
+            <tr><th scope="row">Greek-language newspapers</th><td>Ten newspapers published in Istanbul, providing contemporary perspectives on border negotiations and property disputes.</td></tr>
+            <tr><th scope="row">British diplomatic and consular correspondence</th><td>Reports documenting diplomatic negotiations, territorial developments, and property-related conflicts.</td></tr>
+            <tr><th scope="row">International treaties and conventions</th><td>Diplomatic agreements defining the territorial and legal framework of the Ottoman–Greek border.</td></tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Digital humanities methodology</h3>
+        <div class="body">
+          <p>The project develops an interdisciplinary research workflow organized around four interconnected processes.</p>
+          <ol class="workflow">
+            <li>
+              <h4>Document processing</h4>
+              <p>Digitization, image enhancement, transcription, optical character recognition (OCR), and preparation of multilingual historical texts.</p>
+            </li>
+            <li>
+              <h4>Historical data extraction</h4>
+              <p>Identification and classification of historical actors, places, properties, legal procedures, and events.</p>
+            </li>
+            <li>
+              <h4>Data integration</h4>
+              <p>Organization and cross-referencing of information from Ottoman, Greek, and British sources through structured datasets and historical identifiers.</p>
+            </li>
+            <li>
+              <h4>Historical analysis and visualization</h4>
+              <p>Spatial analysis, network analysis, and digital visualization of historical property relations and border transformations.</p>
+            </li>
+          </ol>
+          <p>Throughout these processes, historians guide the interpretation and validation of computational outputs. Particular attention is given to source provenance, historical ambiguity, and the methodological challenges of integrating heterogeneous archival materials.</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================== DIGITAL RESOURCES ===================== -->
+    <div class="part" id="resources" data-nav>
+      <header class="part-head">
+        <h2>Digital resources</h2>
+        <p>Datasets, tools, and visualizations</p>
+      </header>
+
+      <section class="section">
+        <h3>Overview</h3>
+        <div class="body">
+          <p>The project develops digital resources to support the investigation of historical property relations and territorial transformations. These resources are being created through an iterative process of archival research, data preparation, computational analysis, and historical validation.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Thessaly Border Gazetteer</h3>
+        <div class="body">
           <ol class="status" aria-label="Status: in development">
             <li class="is-done">Planned</li>
             <li class="is-now">In development</li>
             <li>Published</li>
           </ol>
-          <p>Explore the historical geography of the Ottoman–Greek frontier through a developing gazetteer that connects historical place names, modern geographical identifications, and archival references.</p>
-          <a class="btn" href="/Thessaly-Border-Gazetteer/">Open the gazetteer</a>
+          <p>The Thessaly Border Gazetteer is a historical geographical dataset designed to identify and locate settlements and other geographical entities appearing in sources related to the Ottoman–Greek border.</p>
+          <p>The gazetteer brings together Ottoman, Greek, and modern place names, geographical coordinates, and supporting references. It documents the sources and degree of certainty associated with geographical identifications, enabling researchers to evaluate alternative place-name matches and historical ambiguities.</p>
+          <p>The gazetteer will support the spatial analysis of property relations and border changes.</p>
+          <p><a class="btn" href="/Thessaly-Border-Gazetteer/">Open the gazetteer</a></p>
         </div>
+      </section>
+
+      <section class="section">
+        <h3>Multilingual historical corpus</h3>
+        <div class="body">
+          <ol class="status" aria-label="Status: in development">
+            <li class="is-done">Planned</li>
+            <li class="is-now">In development</li>
+            <li>Published</li>
+          </ol>
+          <p>The project is assembling and processing a multilingual corpus of Ottoman, Greek, and British historical documents concerning territorial negotiations, property claims, and administrative transformations.</p>
+          <p>The research workflow combines computational text-processing methods with historian-guided transcription, interpretation, and validation. Structured data extracted from these sources will support comparative historical analysis.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Historical maps and spatial data</h3>
+        <div class="body">
+          <ol class="status" aria-label="Status: in development">
+            <li class="is-done">Planned</li>
+            <li class="is-now">In development</li>
+            <li>Published</li>
+          </ol>
+          <p>The project develops historical maps and spatial datasets to examine the geographical dimensions of border negotiations, territorial transfers, and property disputes.</p>
+          <p>By integrating historical cartography, archival references, and geographical data, these resources will facilitate the spatial investigation of changing political boundaries and property relations.</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================== TEAM ===================== -->
+    <div class="part" id="team" data-nav>
+      <header class="part-head">
+        <h2>Team</h2>
+        <p>An interdisciplinary research collaboration</p>
+      </header>
+
+      <!--
+        One <article class="person"> per team member. Fields:
+          .person-name   full name
+          .person-role   role in the project, then affiliation
+          .person-bio    one or two paragraphs
+          .person-photo  square photo: <img src="/team/photos/<slug>.jpg" alt="">
+                         leave the div empty until a photo is available; it renders hatched.
+      -->
+      <div class="people">
+
+        <article class="person">
+          <div class="person-text">
+            <h3 class="person-name">Fatma Öncel</h3>
+            <p class="person-role">Principal Investigator. Bahçeşehir University, Istanbul.</p>
+            <div class="person-bio">
+              <p><span class="todo">Short biography to be added: research interests, previous work, degrees.</span></p>
+            </div>
+          </div>
+          <div class="person-photo"></div>
+        </article>
+
       </div>
-    </section>
+
+      <section class="section">
+        <h3>Contact</h3>
+        <div class="body">
+          <p>Principal Investigator: Fatma Öncel, Bahçeşehir University.<br><a href="mailto:fatma.oncel@bau.edu.tr">fatma.oncel@bau.edu.tr</a></p>
+        </div>
+      </section>
+    </div>
 
   </main>
 
   <footer class="site-footer">
     <p>Borders and Property. Funded by TÜBİTAK, Project No. 225K044, 2025–2028.</p>
-    <p><a href="/research/">Research</a> &nbsp; <a href="/resources/">Digital resources</a> &nbsp; <a href="/team/">Team</a> &nbsp; <a href="/Thessaly-Border-Gazetteer/">Thessaly Border Gazetteer</a></p>
+    <p><a href="#research">Research</a> &nbsp; <a href="#resources">Digital resources</a> &nbsp; <a href="#team">Team</a> &nbsp; <a href="/Thessaly-Border-Gazetteer/">Thessaly Border Gazetteer</a></p>
   </footer>
 
   <script>
@@ -106,6 +273,35 @@
       document.getElementById('scaleYear').textContent = year;
       document.getElementById('projectScale').setAttribute('aria-label',
         'Project timeline from December 2025 to December 2028, now in year ' + year + ' of 3');
+    })();
+
+    // Navigation follows the scroll: the last part whose top has passed the header is current.
+    (function () {
+      var links = Array.prototype.slice.call(document.querySelectorAll('.site-nav a[href^="#"]'));
+      var parts = Array.prototype.slice.call(document.querySelectorAll('[data-nav]'));
+      var byId = {};
+      links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+      var current = null, ticking = false;
+
+      function headerH() {
+        return parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 72;
+      }
+      function update() {
+        ticking = false;
+        var line = headerH() + 40, id = parts[0].id;
+        parts.forEach(function (p) { if (p.getBoundingClientRect().top <= line) id = p.id; });
+        var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+        if (atBottom) id = parts[parts.length - 1].id;
+        if (id === current) return;
+        current = id;
+        links.forEach(function (a) { a.removeAttribute('aria-current'); });
+        if (byId[id]) byId[id].setAttribute('aria-current', 'page');
+        if (history.replaceState) history.replaceState(null, '', id === parts[0].id ? location.pathname : '#' + id);
+      }
+      function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      update();
     })();
   </script>
 </body>
