@@ -69,7 +69,7 @@ em{ font-style:italic; }
   padding:9px 10px 7px; border-bottom:2px solid transparent;
 }
 .site-nav a:hover{ color:var(--on-ink); }
-.site-nav a[aria-current="page"]{ color:var(--on-ink); border-bottom-color:var(--frontier); }
+.site-nav a[aria-current]{ color:var(--on-ink); border-bottom-color:var(--frontier); }
 
 /* Boundary symbol: the dash-dot line of an international frontier, drawn once on load. */
 .frontier-line{
