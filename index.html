@@ -4,121 +4,110 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Borders and Property</title>
-
-  <!-- Typography: same academic pairing as the Thessaly Border Gazetteer -->
+  <meta name="description" content="Digital approaches to the Ottoman–Greek border and property relations, 1877–1883. A three-year research project funded by TÜBİTAK.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --header-h: 84px;
-      --ink:        #1b2831;
-      --ink-2:      #23343f;
-      --frontier:   #b22222;
-      --parchment:  #f5efe3;
-      --parchment-2:#efe7d7;
-      --brass:      #b28a3d;
-      --amber:      #d69329;
-      --line:       #e0d6c4;
-      --text:       #241f18;
-      --text-soft:  #5b5241;
-      --on-ink:     #efe6d4;
-      --on-ink-soft:#9db0bb;
-    }
-
-    *{ box-sizing:border-box; }
-    html, body{ width:100%; height:100%; margin:0; padding:0; }
-    body{
-      font-family:"EB Garamond", Georgia, "Times New Roman", serif;
-      background:var(--parchment);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
-    }
-
-    /* ---------- Header (shared design with the Thessaly Border Gazetteer) ---------- */
-    .app-header{
-      position:fixed; inset:0 0 auto 0; height:var(--header-h); z-index:2000;
-      display:flex; align-items:center; gap:15px;
-      padding:0 clamp(15px, 3vw, 28px);
-      background:radial-gradient(140% 220% at 0% -20%, var(--ink-2), var(--ink) 62%);
-      border-bottom:1px solid rgba(255,255,255,.05);
-    }
-    .head-titles{ display:flex; flex-direction:column; justify-content:center; min-width:0; }
-    .head-title{
-      font-family:"Cormorant Garamond", Georgia, serif; font-weight:600;
-      font-size:clamp(21px, 2.9vw, 32px); line-height:1.0; letter-spacing:.3px;
-      color:var(--on-ink); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-    }
-    .head-sub{
-      margin-top:3px; font-style:italic; font-size:clamp(12px, 1.4vw, 14px);
-      letter-spacing:.01em; color:var(--on-ink-soft);
-      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-    }
-    @media (max-width:660px){ .head-sub{ display:none; } }
-
-    .site-nav{ margin-left:auto; flex:0 0 auto; display:flex; align-items:center; gap:2px; }
-    .site-nav a{
-      font-family:"EB Garamond", Georgia, serif; font-weight:600; font-size:14px;
-      font-variant:all-small-caps; letter-spacing:.14em; text-decoration:none;
-      color:var(--on-ink-soft); padding:6px 10px 4px; white-space:nowrap;
-      border-bottom:2px solid transparent; border-radius:6px 6px 0 0;
-      transition:color .15s ease, background .15s ease;
-    }
-    .site-nav a:hover{ color:var(--on-ink); background:rgba(255,255,255,.05); }
-    .site-nav a[aria-current="page"]{ color:var(--on-ink); border-bottom-color:var(--brass); }
-    .site-nav a:focus-visible{ outline:2px solid var(--amber); outline-offset:2px; }
-    @media (max-width:660px){
-      /* Two rows on narrow screens: title above, navigation below (same as the gazetteer). */
-      :root{ --header-h: 104px; }
-      .app-header{ flex-wrap:wrap; align-content:center; gap:6px 12px; }
-      .head-titles{ flex:1 1 100%; }
-      .site-nav{ margin-left:-8px; }
-      .site-nav a{ padding:6px 8px 4px; }
-      .site-nav .long{ display:none; }
-    }
-
-    .frontier-line{
-      position:fixed; left:0; right:0; top:calc(var(--header-h) - 1px); height:3px; z-index:2001;
-      background:repeating-linear-gradient(to right,
-        var(--frontier) 0 17px, transparent 17px 23px,
-        var(--frontier) 23px 26px, transparent 26px 32px);
-      clip-path:inset(0 100% 0 0);
-      animation:draw 1.15s cubic-bezier(.72,0,.2,1) .15s forwards;
-    }
-    @keyframes draw{ to{ clip-path:inset(0 0 0 0); } }
-
-    main{ padding:calc(var(--header-h) + 24px) clamp(16px, 4vw, 40px) 40px; }
-
-    .reveal{ opacity:0; transform:translateY(7px); animation:rise .7s ease forwards; }
-    .reveal.d1{ animation-delay:.05s; }
-    .reveal.d2{ animation-delay:.13s; }
-    @keyframes rise{ to{ opacity:1; transform:none; } }
-
-    @media (prefers-reduced-motion: reduce){
-      .frontier-line{ animation:none; clip-path:inset(0 0 0 0); }
-      .reveal{ animation:none !important; opacity:1 !important; transform:none !important; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/site.css">
 </head>
 <body>
 
   <header class="app-header">
-    <div class="head-titles">
-      <span class="head-title reveal d1">Borders and Property</span>
-      <span class="head-sub reveal d1">Research project site</span>
-    </div>
-
-    <nav class="site-nav reveal d2" aria-label="Site">
+    <a class="brand" href="/">
+      <span class="brand-name">Borders and Property</span>
+      <span class="brand-sub">Ottoman–Greek border and property relations, 1877–1883</span>
+    </a>
+    <nav class="site-nav" aria-label="Site">
       <a href="/" aria-current="page">Home</a>
-      <a href="/Thessaly-Border-Gazetteer/"><span class="long">Thessaly </span>Gazetteer</a>
+      <a href="/research/">Research</a>
+      <a href="/resources/"><span class="long">Digital </span>Resources</a>
+      <a href="/team/">Team</a>
+      <a href="/Thessaly-Border-Gazetteer/">Gazetteer</a>
     </nav>
   </header>
-
   <div class="frontier-line" aria-hidden="true"></div>
 
-  <main></main>
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Digital approaches to the Ottoman–Greek border and property relations, <span style="white-space:nowrap">1877–1883</span></h1>
 
+      <div class="scale" id="projectScale" role="img" aria-label="Project timeline from December 2025 to December 2028, now in year 1 of 3">
+        <div class="scale-bar">
+          <span class="scale-seg"><span class="fill" style="width:90%"></span></span>
+          <span class="scale-seg"><span class="fill" style="width:0%"></span></span>
+          <span class="scale-seg"><span class="fill" style="width:0%"></span></span>
+        </div>
+        <ol class="scale-ticks" aria-hidden="true">
+          <li style="left:0">Dec 2025</li>
+          <li style="left:33.333%">Dec 2026</li>
+          <li style="left:66.667%">Dec 2027</li>
+          <li style="left:100%">Dec 2028</li>
+        </ol>
+        <p class="scale-note">Three-year project, now in <strong>year <span id="scaleYear">1</span> of 3</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="page">
+
+    <section class="section">
+      <h2>About the project</h2>
+      <div class="body">
+        <p><em>Borders and Property</em> is a three-year research project (2025–2028) funded by the Scientific and Technological Research Council of Türkiye (TÜBİTAK, Project No. 225K044).</p>
+        <p>The project investigates the transformation of property relations along the Ottoman–Greek border during the territorial negotiations and border changes of 1877–1883. Drawing on Ottoman, Greek, and British historical sources, it examines how shifting political boundaries affected property claims, legal practices, and relations between landholders and state authorities.</p>
+        <p>Bringing together historians and computer scientists, the project develops digital approaches to the analysis and integration of multilingual historical sources. Its research combines archival investigation, historical data extraction, spatial analysis, and computational methods.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Funding</h2>
+      <div class="body">
+        <p>Scientific and Technological Research Council of Türkiye (TÜBİTAK), Project No. 225K044.</p>
+        <p>Co-funder: Bahçeşehir University.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Featured digital resource</h2>
+      <div class="body">
+        <div class="sheet">
+          <h3>Thessaly Border Gazetteer</h3>
+          <ol class="status" aria-label="Status: in development">
+            <li class="is-done">Planned</li>
+            <li class="is-now">In development</li>
+            <li>Published</li>
+          </ol>
+          <p>Explore the historical geography of the Ottoman–Greek frontier through a developing gazetteer that connects historical place names, modern geographical identifications, and archival references.</p>
+          <a class="btn" href="/Thessaly-Border-Gazetteer/">Open the gazetteer</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Borders and Property. Funded by TÜBİTAK, Project No. 225K044, 2025–2028.</p>
+    <p><a href="/research/">Research</a> &nbsp; <a href="/resources/">Digital resources</a> &nbsp; <a href="/team/">Team</a> &nbsp; <a href="/Thessaly-Border-Gazetteer/">Thessaly Border Gazetteer</a></p>
+  </footer>
+
+  <script>
+    // Project timeline: 2 December 2025 to 2 December 2028 (36 months).
+    (function () {
+      var START = new Date('2025-12-02');
+      var MONTHS = 36;
+      var end = new Date(START); end.setMonth(end.getMonth() + MONTHS);
+      var f = Math.min(1, Math.max(0, (Date.now() - START) / (end - START)));
+      var fills = document.querySelectorAll('#projectScale .fill');
+      for (var i = 0; i < fills.length; i++) {
+        var s = i / fills.length, e = (i + 1) / fills.length;
+        var w = Math.min(1, Math.max(0, (f - s) / (e - s)));
+        fills[i].style.width = (w * 100).toFixed(1) + '%';
+      }
+      var year = Math.min(fills.length, Math.floor(f * fills.length) + 1);
+      document.getElementById('scaleYear').textContent = year;
+      document.getElementById('projectScale').setAttribute('aria-label',
+        'Project timeline from December 2025 to December 2028, now in year ' + year + ' of 3');
+    })();
+  </script>
 </body>
 </html>
